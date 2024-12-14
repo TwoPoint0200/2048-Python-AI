@@ -30,7 +30,7 @@ class GreedyBoard():
         move = self.get_best_move()
         if move is None:
             return False
-        print(f"Taking move {move}")
+        # print(f"Taking move {move}")
         self.board.move(move)
         return True
 

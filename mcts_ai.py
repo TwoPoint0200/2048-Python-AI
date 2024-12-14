@@ -16,7 +16,7 @@ class Node:
         self.visits = 0
         self.untried_moves = board.get_valid_moves()
 
-    def ucb1(self, exploration=1.41, normalizing_factor=1):
+    def ucb1(self, exploration=0.1, normalizing_factor=1):
         if self.visits == 0:
             return float('inf')
         return ((self.wins / normalizing_factor) / self.visits) + exploration * math.sqrt(math.log(self.parent.visits) / self.visits)
@@ -30,7 +30,7 @@ class Node:
         return child
 
 class MCTSBoard:
-    def __init__(self, board: bp.Board, simulation_time=1.0, heuristic=None, exploration=1.41, greedy_heuristic=None):
+    def __init__(self, board: bp.Board, simulation_time=1.0, heuristic=None, exploration=0.1, greedy_heuristic=None):
         self.board = board
         self.simulation_time = simulation_time
         if heuristic is None:
@@ -90,8 +90,8 @@ class MCTSBoard:
                 node = node.parent
 
         # Print the number of visits for each child
-        for child in root.children:
-            print(child.move, child.visits)
+        # for child in root.children:
+        #     print(child.move, child.visits)
         # Choose best move based on most visits
         return max(root.children, key=lambda c: c.visits).move if root.children else None
 
@@ -99,7 +99,7 @@ class MCTSBoard:
         move = self.get_best_move()
         if move is None:
             return False
-        print(f"Taking move {move}")
+        # print(f"Taking move {move}")
         self.board.move(move)
         return True
 
@@ -127,6 +127,6 @@ class VisualMCTS(GameVisual):
 if __name__ == '__main__':
     # Test with tile sum game over heuristic
     board = bp.Board()
-    mcts_board = MCTSBoard(board, simulation_time=1, heuristic=heuristics.tile_sum_heuristic, exploration=0.1)
+    mcts_board = MCTSBoard(board, simulation_time=0.1, heuristic=heuristics.tile_sum_heuristic, exploration=0.1)
     visual = VisualMCTS(mcts_board, delay=1)
 
