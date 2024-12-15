@@ -90,6 +90,7 @@ class MCTSBoard:
                 node = node.parent
 
         # Print the number of visits for each child
+        # print("Number of visits for each child:")
         # for child in root.children:
         #     print(child.move, child.visits)
         # Choose best move based on most visits
@@ -129,4 +130,6 @@ if __name__ == '__main__':
     board = bp.Board()
     mcts_board = MCTSBoard(board, simulation_time=0.1, heuristic=heuristics.tile_sum_heuristic, exploration=0.1)
     visual = VisualMCTS(mcts_board, delay=1)
+
+    
 

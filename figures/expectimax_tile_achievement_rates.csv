@@ -1,0 +1,11 @@
+Variant,Tile 512,Tile 1024,Tile 2048,Tile 4096
+depth_1_score_heuristic,1.0,0.0,0.0,0.0
+depth_1_open_cells_heuristic,13.0,0.0,0.0,0.0
+depth_2_score_heuristic,1.0,0.0,0.0,0.0
+depth_2_open_cells_heuristic,17.0,1.0,0.0,0.0
+depth_3_score_heuristic,48.0,1.0,0.0,0.0
+depth_3_open_cells_heuristic,87.0,34.0,1.0,0.0
+depth_4_score_heuristic,56.99999999999999,4.0,0.0,0.0
+depth_4_open_cells_heuristic,83.0,38.0,0.0,0.0
+depth_5_score_heuristic,91.0,49.0,2.0,0.0
+depth_5_open_cells_heuristic,100.0,78.0,18.0,0.0

@@ -1,0 +1,3 @@
+Variant,Tile 512,Tile 1024,Tile 2048,Tile 4096
+score_heuristic,0.0,0.0,0.0,0.0
+open_cells_heuristic,12.0,0.0,0.0,0.0

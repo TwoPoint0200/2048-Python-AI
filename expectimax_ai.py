@@ -94,7 +94,7 @@ class VisualEB(GameVisual):
 if __name__ == '__main__':
     # Test with score heuristic
     board = bp.Board()
-    expectimax_board = ExpectimaxBoard(board, depth=3, heuristic=heuristics.score_heuristic)
+    expectimax_board = ExpectimaxBoard(board, depth=5, heuristic=heuristics.score_heuristic)
     visual = VisualEB(expectimax_board, delay=10)
 
     # Test with open cells heuristic
