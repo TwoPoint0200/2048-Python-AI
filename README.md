@@ -1,10 +1,6 @@
 2048 Python with AI
 ===================
 
-[![Run on Repl.it](https://repl.it/badge/github/yangshun/2048-python)](https://repl.it/github/yangshun/2048-python)
-
----
-
 This project is a Python implementation of the popular game [2048](https://github.com/gabrielecirulli/2048) by Gabriele Cirulli. The objective of the game is to slide numbered tiles on a grid to combine them to create a tile with the number 2048. This version uses TKinter for the graphical interface and includes several AI strategies to play the game.
 
 ![screenshot](img/screenshot.png)
@@ -46,8 +42,22 @@ Several heuristics are implemented to evaluate the board state:
 - **Max Tile Heuristic**: Value of the highest tile.
 - **Tile Sum Heuristic**: Weighted sum of all tile values.
 
-## Contributors
+## Results and Analysis
 
-- [Yanghun Tay](http://github.com/yangshun)
-- [Emmanuel Goh](http://github.com/emman27)
+After running the AI implementations, various graphs have been generated to analyze their performance.
 
+### Score Comparisons
+
+![Combined AI Scores](figures/combined_avg_median_scores.png)
+
+### Key Tile Achievement Rates
+
+![Combined AI Tile Achievements](figures/combined_tile_achievements.png)
+
+### Average Time per Move
+
+![Combined Time per Move](figures/combined_time_per_move.png)
+
+### Average Time per Game
+
+![Combined Time per Game](figures/combined_time_per_game.png)
